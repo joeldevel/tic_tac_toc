@@ -1,7 +1,12 @@
-import React from 'react';
-import Board from './Board'
+import React, { useState } from 'react';
+import Board from './Board';
+import {calculateWinner} from '../helpers';
 
 const Game = () => {
+  // use hooks, the initial state of board is a 9 null array
+  const [ board, setBoard] = useState(Array(9).fill(null));
+  const [xIsNext, setXisNext] = useState(true);
+  const winner = calculateWinner(board);
 
   const handleClick = () => {
 
@@ -13,7 +18,7 @@ const Game = () => {
 
   }
   return (
-    <Board onClick={handleClick}/>
+    <Board squares={board} onClick={handleClick}/>
   )
 }
 

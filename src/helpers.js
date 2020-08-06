@@ -1,4 +1,5 @@
 export function calculateWinner(squares) {
+  // All posible winning combinations
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
