@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Square = () => <div>square</div>
+// squre receives props, here destructured
+// the button uses those props
+const Square = ( {value, onClick}) => (
+  <button onClick={onClick}>
+    { value }
+  </button>
+)
 
 export default Square
