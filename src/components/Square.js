@@ -3,6 +3,7 @@ import React from 'react';
 // An object containing the square style
 const style = {
     background: 'dodgerblue',
+    color: 'plum',
     border: '2px solid black',
     fontSize: '30px',
     fontWeight: '800',
