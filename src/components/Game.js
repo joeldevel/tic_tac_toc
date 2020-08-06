@@ -8,8 +8,15 @@ const Game = () => {
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(board);
 
-  const handleClick = () => {
-
+  const handleClick = (i) => {
+    const preBoard = [ ...board];
+    if( winner || preBoard[i]) return;
+    // Fill button accordingly
+    preBoard[i] = xIsNext? 'X':'O';
+    // update board state
+    setBoard( preBoard );
+    // update xIsNext
+    setXisNext( !xIsNext );
   }
   const jumpTo = () => {
 
