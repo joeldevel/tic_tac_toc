@@ -9,8 +9,9 @@ const styles = {
 }
 const Game = () => {
   // use hooks, the initial state of board is a 9 null array
-  const [ board, setBoard] = useState(Array(9).fill(null));
-  const [xIsNext, setXisNext] = useState(true);
+  const [ board, setBoard ] = useState(Array(9).fill(null));
+  const [ xIsNext, setXisNext ] = useState(true);
+  // const [ history, setHistory ] = useState( [Array(9).fill(null)] );
   const winner = calculateWinner(board);
 
   const handleClick = (i) => {
@@ -27,9 +28,11 @@ const Game = () => {
 
   }
   const renderMoves = () => {
-    return <button onClick={() => setBoard(Array(9).fill(null))}>
-               Start Game
-    </button>
+    return (
+      <button onClick={() => setBoard(Array(9).fill(null))}>
+        Start Game
+      </button>
+    )
   }
   return (
     <>
